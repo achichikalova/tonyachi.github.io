@@ -1,0 +1,51 @@
+//main: ../style.less
+.portfolio {
+    margin: 0 -1rem 2.8rem;
+}
+
+.portfolio__cards {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.portfolio__item {
+    overflow: hidden;
+    box-shadow: 0 0 .3rem fade(#000, 25%);
+    border-radius: .7rem;
+    margin: .5rem;
+    transition: all .2s linear;
+
+
+    &:hover {
+        box-shadow: 0 0 1rem fade(#000, 35%);
+        transform: translate(1px);
+    }
+}
+
+.card__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.card__content {
+    padding: 1rem .8rem;
+}
+
+.card__category {
+    padding-bottom: .5rem;
+    font-size: 0.8rem;
+    color: @black;
+    text-transform: uppercase;
+}
+
+.card__title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.06rem;
+    color: @black;
+    text-transform: uppercase;
+    font-weight: 700;
+}

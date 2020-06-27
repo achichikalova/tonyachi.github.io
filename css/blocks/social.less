@@ -1,0 +1,19 @@
+// main: ../style.less
+
+.social {
+    margin-bottom: 2.8rem;
+    display: flex;
+}
+
+.social__link {
+    margin-right: .66rem;
+    text-decoration: none;
+    color: fade(@black, 70%);
+    font-size: 2rem;
+    transition: all .2s linear;
+
+    &:hover {
+        color: fade(@black, 100%);
+        transform: translateY(-5px);
+    }
+}
