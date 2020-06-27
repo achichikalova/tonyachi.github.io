@@ -1,0 +1,26 @@
+// out: ./style.css, compress: true, sourceMap: false
+// relativeUrls: true
+
+@import "./vars.less";
+
+html {
+    font-size: 16px;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: @black;
+    background-color: red;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Block */
+@import "./blocks/container.less";
