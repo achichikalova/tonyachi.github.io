@@ -2,7 +2,7 @@
 // relativeUrls: true
 
 @import "./vars.less";
-@import "blocks/helpers.less";
+@import "blocks/main/helpers.less";
 
 html {
     font-size: 15px;
@@ -13,6 +13,10 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     color: @black;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
 
 h1,
@@ -35,30 +39,34 @@ p {
 }
 
 /* Block */
-@import "blocks/container.less";
+@import "blocks/main/container.less";
 /* Header */
-@import "blocks/header.less";
+@import "blocks/main/header.less";
 /* User */
-@import "blocks/user.less";
+@import "blocks/main/user.less";
 /* Nav */
-@import "blocks/nav.less";
+@import "blocks/main/nav.less";
 /* Intro */
-@import "blocks/intro.less";
+@import "blocks/main/intro.less";
 /* Social */
-@import "blocks/social.less";
+@import "blocks/main/social.less";
 /* Button */
-@import "blocks/btn.less";
+@import "blocks/main/btn.less";
 /* Works */
-@import "blocks/works.less";
+@import "blocks/main/works.less";
 /* Portfolio */
-@import "blocks/portfolio.less";
+@import "blocks/main/portfolio.less";
 /* About */
-@import "blocks/about.less";
+@import "blocks/main/about.less";
 /* Reviews */
-@import "blocks/reviews.less";
+@import "blocks/main/reviews.less";
 /* News */
-@import "blocks/news.less";
+@import "blocks/main/news.less";
 /* Articles*/
-@import "blocks/articles.less";
+@import "blocks/main/articles.less";
 /* Footer */
-@import "blocks/footer.less";
+@import "blocks/main/footer.less";
+/* Modal */
+@import "blocks/modals/modal.less";
+/* Modal Work */
+@import "blocks/modals/modal-work.less";

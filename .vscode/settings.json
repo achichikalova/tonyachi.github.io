@@ -3,5 +3,6 @@
         "compress": true,
         "sourceMap": true,
         "out": true,
+        "main": ["style.less"],
     }
 }
