@@ -14,7 +14,7 @@
     <title>Portfolio</title>
 </head>
 
-<body class="no-scroll">
+<body>
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -325,7 +325,9 @@
     </footer>
 
     <!-- Modals -->
-    <div class="modal">
+
+    <!-- Work Gallery -->
+    <div class="modal" style="display: none;">
         <div class="modal__dialog">
             <button class="modal__close"><i class="fas fa-times-circle"></i></button>
             <div class="modal-work">
@@ -369,6 +371,141 @@
         </div>
     </div>
 
+    <!-- Resume -->
+    <div class="modal" style="display: none;">
+        <div class="modal__dialog">
+            <button class="modal__close"><i class="fas fa-times-circle"></i></button>
+            <div class="modal__content">
+                <div class="modal__header text-center">
+                    <h3 class="modal__title">resume</h3>
+                    <a class="btn btn--thin" href="#">download pdf</a>
+                    <a class="btn btn--thin" href="#">print</a>
+                </div>
+                <div class="timeline">
+                    <div class="timeline__col timeline__col--left">
+                        <h4 class="timeline__title">Experience</h4>
+                        <div class="timeline__item">
+                            <div class="timeline__date">2017 - <b>Present</b></div>
+                            <h5 class="timeline__company">Freelancer</h5>
+                            <div class="timeline__prof">Art Director</div>
+                            <div class="timeline__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Placeat
+                                ratione veritatis ab quidem perspiciatis eos officia eligendi suscipit dolorem illo
+                                architecto iure deserunt doloribus voluptatem, labore eum? Expedita, mollitia eaque.
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__date">2016 - 2017</div>
+                            <h5 class="timeline__company">The Best Agency</h5>
+                            <div class="timeline__prof">Art Director</div>
+                            <div class="timeline__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Placeat
+                                ratione veritatis ab quidem perspiciatis eos officia eligendi suscipit dolorem illo
+                                architecto iure deserunt doloribus voluptatem, labore eum? Expedita, mollitia eaque.
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__date">2014 - 2016</div>
+                            <h5 class="timeline__company">Better Agency</h5>
+                            <div class="timeline__prof">Senior UI/UX Designer</div>
+                            <div class="timeline__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Placeat
+                                ratione veritatis ab quidem perspiciatis eos officia eligendi suscipit dolorem illo
+                                architecto iure deserunt doloribus voluptatem, labore eum? Expedita, mollitia eaque.
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__date">2012 - 2014</div>
+                            <h5 class="timeline__company">Good Agency</h5>
+                            <div class="timeline__prof">UI/UX Designer</div>
+                            <div class="timeline__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Placeat ratione veritatis ab quidem perspiciatis eos officia eligendi suscipit dolorem
+                                illo
+                                architecto iure deserunt doloribus voluptatem, labore eum? Expedita, mollitia eaque.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="timeline__col timeline__col--right">
+                        <h4 class="timeline__title">Education</h4>
+                        <div class="timeline__item">
+                            <div class="timeline__date">2005 - 2010</div>
+                            <h5 class="timeline__prof">UI/UX Designer</h5>
+                            <div class="timeline__educ">LA Univercity, USA</div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__date">2002 - 2005</div>
+                            <h5 class="timeline__prof">UI/UX Designer</h5>
+                            <div class="timeline__educ">LA College of Art, USA</div>
+                        </div>
+                        <h4 class="timeline__title">Skills</h4>
+                        <div class="progress-bar">
+                            <div class="progress-bar__item">
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">UI/UX Designer</div>
+                                </div>
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__level">
+                                        <div class="progress-bar__progress" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress-bar__item">
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">Illustrator</div>
+                                </div>
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__level">
+                                        <div class="progress-bar__progress" style="width: 95%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress-bar__item">
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">Photoshop</div>
+                                </div>
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__level">
+                                        <div class="progress-bar__progress" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress-bar__item">
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">Scetch</div>
+                                </div>
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__level">
+                                        <div class="progress-bar__progress" style="width: 80%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="timeline__title">Awards</h4>
+                        <div class="timeline__item">
+                            <div class="timeline__date">2010</div>
+                            <h5 class="timeline__awards__title">The Best App Interface</h5>
+                            <div class="timeline__educ">UI/UX Magazine</div>
+                            <div class="timeline__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Asperiores, nobis ad. Sint animi magni, natus quod error soluta quia tenetur
+                                necessitatibus inventore architecto ad adipisci sunt hic optio mollitia harum!</div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__date">2010</div>
+                            <h5 class="timeline__awards__title">The Best App Interface</h5>
+                            <div class="timeline__educ">UI/UX Magazine</div>
+                            <div class="timeline__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut
+                                temporibus facere dignissimos dolore dolorem eveniet odit dolor distinctio. Totam dolor
+                                obcaecati eos iure non cum iste voluptas illum facilis soluta.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a class="btn" href="#">hire me</a>
+                </div>
+
+            </div>
+        </div>
 
 
 

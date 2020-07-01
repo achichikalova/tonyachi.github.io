@@ -4,25 +4,22 @@
     display: flex;
     width: 100%;
     height: 100%;
+    padding: 1rem;
     background-color: fade(@black, 80%);
 
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
+    overflow: auto;
 }
-
-
 
 .modal__dialog {
     position: relative;
     margin: auto;
-    width: auto;
-    max-width: 80rem;
-    height: auto;
-    max-height: 80rem;
+    width: 100%;
+    max-width: 1200px;
     background-color: @white;
-
 }
 
 .modal__close {
@@ -48,4 +45,17 @@
         outline: none;
     }
 
+}
+
+.modal__content {
+    padding: 5rem 1rem;
+}
+
+.modal__title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: @black;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3.5rem;
 }
