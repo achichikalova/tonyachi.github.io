@@ -10,7 +10,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
         integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
-
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <title>Portfolio</title>
 </head>
 
@@ -73,97 +73,97 @@
     <div class="works">
         <div class="container">
             <div class="works__nav">
-                <a href="#" class="works__nav-link">All</a>
-                <a href="#" class="works__nav-link">App</a>
-                <a href="#" class="works__nav-link">Website</a>
-                <a href="#" class="works__nav-link">Interaction</a>
+                <li href="#" class="nav-btn" data-filter="all">All</li>
+                <li href="#" class="nav-btn" data-filter="app">App</li>
+                <li href="#" class="nav-btn" data-filter="website">Website</li>
+                <li href="#" class="nav-btn" data-filter="interaction">Interaction</li>
             </div>
             <div class="portfolio">
                 <div class="portfolio__cards">
-                    <div class="portfolio__item">
+                    <div class="portfolio__item app">
                         <img class="card__img" src="https://placehold.it/370x300" alt="">
                         <div class="card__content">
-                            <div class="card__category">Category</div>
+                            <div class="card__category">Category: App</div>
                             <div class="card__title">
                                 Project Title
                                 <time class="card__date" datetime="2019-11-22">2020</time>
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio__item">
+                    <div class="portfolio__item website">
                         <img class="card__img" src="https://placehold.it/370x300" alt="">
                         <div class="card__content">
-                            <div class="card__category">Category</div>
+                            <div class="card__category">Category: Website</div>
                             <div class="card__title">
                                 Project Title
                                 <time class="card__date" datetime="2019-11-22">2020</time>
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio__item">
+                    <div class="portfolio__item interaction">
                         <img class="card__img" src="https://placehold.it/370x300" alt="">
                         <div class="card__content">
-                            <div class="card__category">Category</div>
+                            <div class="card__category">Category: Interaction</div>
                             <div class="card__title">
                                 Project Title
                                 <time class="card__date" datetime="2019-11-22">2020</time>
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio__item">
+                    <div class="portfolio__item app">
                         <img class="card__img" src="https://placehold.it/370x300" alt="">
                         <div class="card__content">
-                            <div class="card__category">Category</div>
+                            <div class="card__category">Category: App</div>
                             <div class="card__title">
                                 Project Title
                                 <time class="card__date" datetime="2019-11-22">2019</time>
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio__item">
+                    <div class="portfolio__item website">
                         <img class="card__img" src="https://placehold.it/370x300" alt="">
                         <div class="card__content">
-                            <div class="card__category">Category</div>
+                            <div class="card__category">Category: Website</div>
                             <div class="card__title">
                                 Project Title
                                 <time class="card__date" datetime="2019-11-22">2019</time>
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio__item">
+                    <div class="portfolio__item interaction">
                         <img class="card__img" src="https://placehold.it/370x300" alt="">
                         <div class="card__content">
-                            <div class="card__category">Category</div>
+                            <div class="card__category">Category: Interaction</div>
                             <div class="card__title">
                                 Project Title
                                 <time class="card__date" datetime="2019-11-22">2019</time>
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio__item">
+                    <div class="portfolio__item app">
                         <img class="card__img" src="https://placehold.it/370x300" alt="">
                         <div class="card__content">
-                            <div class="card__category">Category</div>
+                            <div class="card__category">Category: App</div>
                             <div class="card__title">
                                 Project Title
                                 <time class="card__date" datetime="2019-11-22">2019</time>
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio__item">
+                    <div class="portfolio__item website">
                         <img class="card__img" src="https://placehold.it/370x300" alt="">
                         <div class="card__content">
-                            <div class="card__category">Category</div>
+                            <div class="card__category">Category: Website</div>
                             <div class="card__title">
                                 Project Title
                                 <time class="card__date" datetime="2019-11-22">2019</time>
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio__item">
+                    <div class="portfolio__item interaction">
                         <img class="card__img" src="https://placehold.it/370x300" alt="">
                         <div class="card__content">
-                            <div class="card__category">Category</div>
+                            <div class="card__category">Category: Interaction</div>
                             <div class="card__title">
                                 Project Title
                                 <time class="card__date" datetime="2020-01-22">2019</time>
@@ -506,9 +506,38 @@
 
             </div>
         </div>
+    </div>
+
+    <!-- Contacts -->
+    <div class="modal" style="display: none;">
+        <div class="modal__dialog modal__dialog--small">
+            <button class="modal__close"><i class="fas fa-times-circle"></i></button>
+            <div class="contact">
+                <div class="contact__info">
+                    <h3 class="modal__title text-left" style="margin-bottom: 0;">Let's Talk</h3>
+                    <div class="modal__subtitle">Call me or send me a request</div>
+                    <div class="contact__phone"><i class="fas fa-phone-square-alt"></i>(200) 100 3000</div>
+                    <div class="contact__email" style="margin-bottom: 1.8rem;"><i
+                            class="fas fa-envelope"></i>designer@ui43.com</div>
+                    <div class="form">
+                        <form action="/" method="POST" style="margin-bottom: 1.8rem;">
+                            <lable class="lable" for="input_email">Address e-mail</lable>
+                            <input class="input" name="input_email" type="text" id="input_email"
+                                placeholder="Address e-mail">
+                        </form>
+                        <lable class="lable" for="input_text">Request</lable>
+                        <textarea class="textarea" name="input_text" type="text" id="input_text"
+                            placeholder="Type your request..."></textarea>
+                    </div>
+                    <button class="btn" href="#" style="float: right;">send</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-
+    <!-- JS -->
+    <script src="js/app.js"></script>
 
 </body>
 
