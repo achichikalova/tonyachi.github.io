@@ -10,7 +10,9 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
         integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
     <title>Portfolio</title>
 </head>
 
@@ -33,7 +35,7 @@
                     <a class="nav__link" href="#">about me</a>
                     <a class="nav__link" href="#">blog</a>
                     <a class="nav__link" href="#">contact</a>
-                    <a class="btn btn--small" href="#">hire me</a>
+                    <button class="btn btn--small" data-modal="#modal_hire_me">hire me</button>
 
                 </nav>
             </div>
@@ -61,8 +63,8 @@
                         <a href="#" class="social__link" target="_blank">
                             <i class="fab fa-facebook-square" aria-hidden="true"></i></a>
                     </div>
-                    <a class="btn" href="#">hire me</a>
-                    <button class="btn" href="#">see my resume</button>
+                    <button class="btn" data-modal="#modal_hire_me">hire me</button>
+                    <button class="btn" data-modal="#modal_resume">see my resume</button>
                 </div>
                 <img class="intro__photo" src="/images/intro/designer_photo.png" alt="">
             </div><!-- /.intro__inner -->
@@ -78,7 +80,7 @@
                 <li href="#" class="nav-btn" data-filter="website">Website</li>
                 <li href="#" class="nav-btn" data-filter="interaction">Interaction</li>
             </div>
-            <div class="portfolio">
+            <div class="portfolio" data-modal="#modal_project_1">
                 <div class="portfolio__cards">
                     <div class="portfolio__item app">
                         <img class="card__img" src="https://placehold.it/370x300" alt="">
@@ -198,8 +200,8 @@
                             illo ea sapiente in dignissimos voluptatibus fugit nihil itaque adipisci labore, magni
                             dolorum hic qui repellendus laudantium?</p>
                     </div>
-                    <a class="btn" href="#">hire me</a>
-                    <button class="btn" href="#">see my resume</button>
+                    <button class="btn" data-modal="#modal_hire_me">hire me</button>
+                    <button class="btn" data-modal="#modal_resume">see my resume</button>
                 </div><!-- /.about__content -->
             </div><!-- /.about__inner -->
         </div><!-- /.container -->
@@ -290,7 +292,6 @@
     </section><!-- /.News -->
 
     <!-- Footer -->
-
     <footer class="footer">
         <div class="container">
             <div class="footer__inner">
@@ -318,7 +319,7 @@
                     <a class="nav__link" href="#">About me</a>
                     <a class="nav__link" href="#">Blog</a>
                     <a class="nav__link" href="#">Contact</a>
-                    <a class="btn btn--small" href="#">hire me</a>
+                    <button class="btn btn--small" data-modal="#modal_hire_me">hire me</button>
                 </nav>
             </div>
         </div>
@@ -327,12 +328,16 @@
     <!-- Modals -->
 
     <!-- Work Gallery -->
-    <div class="modal" style="display: none;">
+    <div class="modal" id="modal_project_1">
         <div class="modal__dialog">
-            <button class="modal__close"><i class="fas fa-times-circle"></i></button>
+            <button class="modal__close" data-close><i class="fas fa-times-circle"></i></button>
             <div class="modal-work">
                 <div class="modal-work__preview">
-                    <img class="modal-work__photo" src="https://placehold.it/790x780" alt="">
+                    <div id="worksSlider">
+                        <div><img class="modal-work__photo slick-slide" src="https://placehold.it/790x780" alt=""></div>
+                        <div><img class="modal-work__photo slick-slide" src="https://placehold.it/790x780/333" alt="">
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-work__content">
                     <div class="modal-work__header">
@@ -372,7 +377,7 @@
     </div>
 
     <!-- Resume -->
-    <div class="modal" style="display: none;">
+    <div class="modal" id="modal_resume">
         <div class="modal__dialog">
             <button class="modal__close"><i class="fas fa-times-circle"></i></button>
             <div class="modal__content">
@@ -509,7 +514,7 @@
     </div>
 
     <!-- Contacts -->
-    <div class="modal" style="display: none;">
+    <div class="modal" id="modal_hire_me">
         <div class="modal__dialog modal__dialog--small">
             <button class="modal__close"><i class="fas fa-times-circle"></i></button>
             <div class="contact">
@@ -537,6 +542,7 @@
 
 
     <!-- JS -->
+    <script src="js/slick.js"></script>
     <script src="js/app.js"></script>
 
 </body>
