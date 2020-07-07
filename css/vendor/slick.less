@@ -111,3 +111,43 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+
+    button {
+        width: 11px;
+        height: 11px;
+        cursor: pointer;
+        padding: 0;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        background-color: #fff;
+        background: transparent;
+        font-size: 0;
+        color: transparent;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    li {
+        margin-right: .5rem;
+
+        &.slick-active {
+            button {
+                background-color: #fff;
+            }
+        }
+    }
+}

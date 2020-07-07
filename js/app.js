@@ -15,6 +15,7 @@ $(document).ready(function () {
     /* Modals */
     const modalCall = $("[data-modal]");
     const modalClose = $(".modal__close");
+    const slickSlider = $('[data-slider="slick"]');
 
     modalCall.click(function () {
 
@@ -22,7 +23,7 @@ $(document).ready(function () {
 
         $(modalId).addClass('show');
         $("body").addClass('no-scroll');
-        $("#worksSlider").slick('setPosition');
+        slickSlider.slick('setPosition');
     });
 
     modalClose.click(function () {
@@ -43,13 +44,19 @@ $(document).ready(function () {
     });
 
     /* Slider: https://kenwheeler.github.io/slick/ */
-    $('#worksSlider').slick({
+    slickSlider.slick({
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,
         arrows: false,
-        dots: false
+        dots: true
+    });
+    $(".slickPrev").click(function () {
+        slickSlider.slick("slickPrev");
+    });
+    $(".slickNext").click(function () {
+        slickSlider.slick("slickNext");
     });
 
 
