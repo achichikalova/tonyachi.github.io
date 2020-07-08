@@ -35,13 +35,17 @@
         margin-left: 1rem;
     }
 
+
     /* Modificators */
     &--small {
+        display: block;
+        align-items: center;
         font-size: 0.94rem;
         font-weight: 700;
         border-width: 2px;
         min-width: auto;
-        margin-left: 2rem;
+        max-width: 14rem;
+        margin: auto;
         padding: .5em 1.2em;
 
         &:hover {
@@ -55,6 +59,22 @@
         font-size: 0.9rem;
     }
 
+
+    @media @tablet {
+        font-size: 1rem;
+    }
+
+    @media @mobile {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: .8rem;
+
+        +.btn {
+            margin-left: 0;
+            margin-top: 1rem;
+        }
+    }
 
 
 

@@ -4,6 +4,20 @@
     display: flex;
     height: 100%;
     align-items: center;
+
+    @media @mobile {
+        display: none;
+    }
+}
+
+.burger {
+    display: none;
+    font-size: 2rem;
+    padding: 1rem;
+
+    @media @mobile {
+        display: block;
+    }
 }
 
 .nav__link {

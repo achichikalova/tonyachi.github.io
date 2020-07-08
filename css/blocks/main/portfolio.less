@@ -5,9 +5,18 @@
 
 .portfolio__cards {
     padding: 1rem;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto auto;
     justify-content: space-between;
+
+    @media @mobile {
+        grid-template-columns: auto auto;
+        justify-content: center;
+    }
+
+    @media @mobile-small {
+        grid-template-columns: auto;
+    }
 }
 
 .portfolio__item {
@@ -22,6 +31,8 @@
         box-shadow: 0 0 1rem fade(#000, 35%);
         transform: translate(1px);
     }
+
+
 }
 
 .card__img {
@@ -39,6 +50,10 @@
     font-size: 0.8rem;
     color: @black;
     text-transform: uppercase;
+
+    @media @mobile {
+        font-size: .7rem;
+    }
 }
 
 .card__title {
@@ -48,4 +63,8 @@
     color: @black;
     text-transform: uppercase;
     font-weight: 700;
+
+    @media @mobile {
+        font-size: 1rem;
+    }
 }
