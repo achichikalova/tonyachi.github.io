@@ -1,7 +1,26 @@
 // main: ../../style.less
 
 .about {
-    margin: 8.4rem 0;
+    margin: 1rem 0;
+
+    @media @mobile-small {
+        margin: 3rem 0;
+        position: relative;
+        margin: 4rem 0 0 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: -100px;
+            right: 0;
+            background: url(../../../images/about/designer_photo.png) left bottom no-repeat;
+            background-size: auto;
+            opacity: 0.1;
+        }
+    }
 }
 
 .about__inner {
@@ -11,43 +30,6 @@
 
 .about__photo {
     width: 50%;
-
-}
-
-.about__content {
-    width: 50%;
-    padding-left: 2rem;
-    margin-top: 2rem;
-}
-
-.about__title {
-    font-size: 3rem;
-    color: @black;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.about__bigtitle {
-    font-size: 6.2rem;
-    line-height: 1.1;
-    position: relative;
-    left: -.7rem;
-    color: fade(@black, 15%);
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 1.4rem;
-}
-
-.about__text {
-    font-size: 0.8rem;
-    line-height: 2;
-    color: @grey;
-    font-weight: 300;
-    margin-bottom: 2.8rem;
-
-}
-
-.about__photo {
     position: relative;
 
     img {
@@ -65,6 +47,98 @@
         left: 1rem;
         bottom: 0;
         z-index: 1;
-        max-width: 100%;
+
+        @media @tablet {
+            max-width: 100%;
+        }
+
+        @media @mobile {
+            display: none;
+        }
     }
+
+    @media @mobile {
+        max-height: 450px;
+    }
+
+    @media @mobile-small {
+        display: none;
+    }
+}
+
+.about__content {
+    width: 50%;
+    padding-left: 2rem;
+    margin-top: 2rem;
+    position: relative;
+
+    @media @mobile-small {
+        position: relative;
+        display: block;
+        padding-left: 0;
+        margin: 1rem;
+
+    }
+
+    @media @mobile-small {
+        width: 100%;
+    }
+}
+
+.about__title {
+    font-size: 3rem;
+    color: @black;
+    font-weight: 700;
+    text-transform: uppercase;
+
+
+    @media @laptop {
+        font-size: 2.5rem;
+    }
+
+    @media @tablet {
+        font-size: 2rem;
+    }
+}
+
+.about__bigtitle {
+    font-size: 6.2rem;
+    line-height: 1.1;
+    position: relative;
+    left: -.7rem;
+    color: fade(@black, 15%);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1.4rem;
+
+    @media @laptop {
+        font-size: 4rem;
+    }
+
+    @media @tablet {
+        font-size: 3rem;
+    }
+
+}
+
+.about__text {
+    font-size: 0.8rem;
+    line-height: 2;
+    color: @grey;
+    font-weight: 300;
+    margin-bottom: 2.8rem;
+
+    @media @tablet {
+        width: 300px;
+        height: 150px;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+    }
+
+    @media @mobile-small {
+        width: 100%;
+        height: auto;
+        color: @black;
+    }
+
 }

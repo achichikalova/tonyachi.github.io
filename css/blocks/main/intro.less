@@ -1,6 +1,10 @@
 // main: ../../style.less
 .intro {
     padding-top: 3rem;
+
+    @media @mobile {
+        margin-top: 100px;
+    }
 }
 
 .intro__inner {
@@ -15,10 +19,18 @@
         padding-top: 3.5rem;
         padding-bottom: 3.5rem;
     }
+
+    @media @mobile {
+        padding-top: 0;
+    }
 }
 
-.intro_content {
+.intro__content {
     width: 50%;
+
+    @media @mobile {
+        width: 100%;
+    }
 }
 
 .intro__subtitle {
@@ -57,6 +69,11 @@
 
     @media @tablet {
         width: 350px;
+        right: 1rem;
+    }
+
+    @media @mobile {
+        width: 250px;
         right: 1rem;
     }
 

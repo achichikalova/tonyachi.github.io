@@ -4,6 +4,14 @@
     display: flex;
     background: url(https://placehold.it/470x700) right no-repeat;
 
+    @media @tablet {
+        background-size: 350px auto;
+    }
+
+    @media @mobile {
+        background: none;
+    }
+
 }
 
 .contact__info {
@@ -14,6 +22,10 @@
     i {
         margin-right: .75rem;
         font-size: 1.1rem;
+    }
+
+    @media @mobile {
+        width: 100%;
     }
 }
 

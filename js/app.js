@@ -1,5 +1,27 @@
 $(document).ready(function () {
 
+
+    /* Smooth Scroll */
+    $("[data-scroll]").on("click", function (event) {
+        var target = $(this.getAttribute('[data-scroll]'));
+
+        if (target.length) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top
+            }, 1000);
+        }
+
+    });
+
+    /* Mobile Nav */
+    $(".burger").click(function () {
+        $(".nav").toggle();
+    })
+    $(".nav__link--mobile").click(function () {
+        $(".nav").hide();
+    })
+
     /* Portfolio Filter */
     $(".nav-btn").click(function () {
         var cat = $(this).attr("data-filter");
@@ -60,8 +82,12 @@ $(document).ready(function () {
     });
 
 
-
-
+    /* Load more works */
+    $("#load__more").click(function (event) {
+        event.preventDefault();
+        $(".portfolio__item--hide").show(500);
+        $("#load__more").hide();
+    })
 
 
 

@@ -1,19 +1,28 @@
 // main: ../../style.less
 .articles {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     margin: -1rem;
+
+    @media @mobile {
+        justify-content: center;
+        grid-template-columns: auto;
+    }
 }
 
 .articles__item {
     margin-bottom: 2rem;
-    width: 33%;
     padding: 0 1rem;
 
     .btn {
         color: #717072;
-        margin-left: 0;
     }
+
+    @media @mobile {
+        max-width: 370px;
+        margin: 0 auto 2rem;
+    }
+
 }
 
 .articles__header {
@@ -37,6 +46,16 @@
     top: 0;
     left: 0;
     z-index: 1;
+
+    @media @tablet {
+        width: 3.1rem;
+        height: 4.1rem;
+    }
+
+    @media @mobile {
+        width: 5.1rem;
+        height: 5.1rem;
+    }
 }
 
 .articles__content {
