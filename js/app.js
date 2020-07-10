@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
+    /* Smooth Scroll to Element on the pge*/
+    $('a[href^="#"]').on('click', function (event) {
 
-    /* Smooth Scroll */
-    $("[data-scroll]").on("click", function (event) {
-        var target = $(this.getAttribute('[data-scroll]'));
+        var target = $(this.getAttribute('href'));
 
         if (target.length) {
             event.preventDefault();
@@ -13,14 +13,6 @@ $(document).ready(function () {
         }
 
     });
-
-    /* Mobile Nav */
-    $(".burger").click(function () {
-        $(".nav").toggle();
-    })
-    $(".nav__link--mobile").click(function () {
-        $(".nav").hide();
-    })
 
     /* Portfolio Filter */
     $(".nav-btn").click(function () {
@@ -87,8 +79,18 @@ $(document).ready(function () {
         event.preventDefault();
         $(".portfolio__item--hide").show(500);
         $("#load__more").hide();
-    })
+    });
 
+
+    /* Mobile Nav */
+    $(".burger").click(function () {
+        $(".nav").toggle();
+
+    });
+    $(".nav__link").click(function () {
+        if ($(window).width() < 767)
+            $(".nav").hide();
+    });
 
 
 });

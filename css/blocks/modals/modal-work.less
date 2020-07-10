@@ -1,31 +1,29 @@
 // main: ../../style.less
 
 .modal-work {
-    display: flex;
+    display: grid;
+    grid-template-columns: 60% 40%;
 
-}
-
-.modal-work__preview {
-    width: 65%;
-    position: relative;
-    overflow: hidden;
+    @media @tablet {
+        display: block;
+    }
 }
 
 .modal-work__photo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 1;
     width: 100%;
     height: auto;
     overflow: hidden;
-    transform: translate(-50%, -50%);
+    margin-bottom: -1rem;
 }
 
 .modal-work__content {
-    width: 35%;
     padding: 3.4rem 3.6rem 1rem 1.73rem;
     position: relative;
+
+    @media @tablet {
+        padding: 3rem;
+    }
+
 }
 
 .modal-work__header {
@@ -67,7 +65,7 @@
     font-weight: 300;
     margin-bottom: 8.66rem;
     height: auto;
-    max-height: 14rem;
+    max-height: 24rem;
     overflow: auto;
 }
 

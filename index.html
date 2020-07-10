@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
     <meta charset="UTF-8">
@@ -31,10 +31,10 @@
                     </div>
                 </div>
                 <nav class="nav" id="nav">
-                    <a class="nav__link nav__link-mobile" href="#" data-scroll="#work">work</a>
-                    <a class="nav__link nav__link-mobile" href="#" data-scroll="#about">about me</a>
-                    <a class="nav__link nav__link-mobile" href="#" data-scroll="#blog">blog</a>
-                    <a class="nav__link nav__link-mobile" href="#" data-scroll="#contact">contact</a>
+                    <a class="nav__link nav__link-mobile" href="#work">work</a>
+                    <a class="nav__link nav__link-mobile" href="#about">about me</a>
+                    <a class="nav__link nav__link-mobile" href="#blog">blog</a>
+                    <a class="nav__link nav__link-mobile" href="#contact">contact</a>
                     <button class="btn btn--small btn-header" data-modal="#modal_hire_me">hire me</button>
                 </nav>
                 <button class="burger" type="button">
@@ -55,7 +55,7 @@
                         <a href="#" class="social__link" target="_blank">
                             <i class="fab fa-linkedin"></i></a>
                         <a href="#" class="social__link" target="_blank">
-                            <i class="fab fa-github-square"></i></i></a>
+                            <i class="fab fa-github-square"></i></a>
                         <a href="#" class="social__link" target="_blank">
                             <i class="fab fa-dribbble-square"></i></a>
                         <a href="#" class="social__link" target="_blank">
@@ -66,8 +66,8 @@
                             <i class="fab fa-facebook-square" aria-hidden="true"></i></a>
                     </div>
                     <div class="buttons">
-                        <button class="btn" data-modal="#modal_hire_me">hire me</button>
-                        <button class="btn" data-modal="#modal_resume">see my resume</button>
+                        <button class="btn btn-intro" data-modal="#modal_hire_me">hire me</button>
+                        <button class="btn btn-intro" data-modal="#modal_resume">see my resume</button>
                     </div>
                 </div>
                 <img class="intro__photo" src="/images/intro/designer_photo.png" alt="">
@@ -79,10 +79,10 @@
     <div class="works" id="work">
         <div class="container">
             <div class="works__nav">
-                <li href="#" class="nav-btn" data-filter="all">All</li>
-                <li href="#" class="nav-btn" data-filter="app">App</li>
-                <li href="#" class="nav-btn" data-filter="website">Website</li>
-                <li href="#" class="nav-btn" data-filter="interaction">Interaction</li>
+                <a href="#" class="nav-btn" data-filter="all">All</a>
+                <a href="#" class="nav-btn" data-filter="app">App</a>
+                <a href="#" class="nav-btn" data-filter="website">Website</a>
+                <a href="#" class="nav-btn" data-filter="interaction">Interaction</a>
             </div>
             <div class="portfolio">
                 <div class="portfolio__cards">
@@ -179,7 +179,7 @@
                 </div>
             </div><!-- /.portfolio -->
             <div>
-                <button href="#" class="btn btn--small" id="load__more">load more work</button>
+                <button class="btn btn--small" id="load__more">load more work</button>
             </div>
         </div><!-- /.container -->
     </div><!-- /.works -->
@@ -223,9 +223,7 @@
                         rhoncus leo. Praesent dui sapien, bibendum quis tempus dictum.</p>
                 </div>
                 <div class="reviews__author">
-                    <img class="reviews__photo" src="https://placehold.it/103x103/2b2a2c
-
-                    C/O https://placeholder.com/#How_To_Set_Background_Text_Color" alt="">
+                    <img class="reviews__photo" src="https://placehold.it/100/100" alt="">
                     <div class="reviews__name">Edward M. Brooks</div>
                     <div class="reviews__company">Marketing House</div>
                     <div class="reviews__rating">
@@ -250,7 +248,7 @@
             <div class="articles">
                 <div class="articles__item">
                     <div class="articles__header">
-                        <time class="articles__date">10 <br> June</time>
+                        <div class="articles__date">10 <br> June</div>
                         <a href="#"><img src="https://placehold.it/370x257" alt="" class="articles__photo img"></a>
                     </div>
                     <div class="articles__content">
@@ -264,7 +262,7 @@
                 </div>
                 <div class="articles__item">
                     <div class="articles__header">
-                        <time class="articles__date">15 <br> June</time>
+                        <div class="articles__date">15 <br> June</div>
                         <a href="#"><img src="https://placehold.it/370x257" alt="" class="articles__photo img"></a>
                     </div>
                     <div class="articles__content">
@@ -278,7 +276,7 @@
                 </div>
                 <div class="articles__item">
                     <div class="articles__header">
-                        <time class="articles__date">20 <br> June</time>
+                        <div class="articles__date">20 <br> June</div>
                         <a href="#"><img src="https://placehold.it/370x257" alt="" class="articles__photo img"></a>
                     </div>
                     <div class="articles__content">
@@ -309,7 +307,7 @@
                         <a href="#" class="social__link" target="_blank">
                             <i class="fab fa-linkedin"></i></a>
                         <a href="#" class="social__link" target="_blank">
-                            <i class="fab fa-github-square"></i></i></a>
+                            <i class="fab fa-github-square"></i></a>
                         <a href="#" class="social__link" target="_blank">
                             <i class="fab fa-dribbble-square"></i></a>
                         <a href="#" class="social__link" target="_blank">
@@ -580,10 +578,10 @@
                                 placeholder="Address e-mail">
                         </form>
                         <lable class="lable" for="input_text">Request</lable>
-                        <textarea class="textarea" name="input_text" type="text" id="input_text"
+                        <textarea class="textarea" name="input_text" id="input_text"
                             placeholder="Type your request..."></textarea>
                     </div>
-                    <button class="btn" href="#" style="float: right;">send</button>
+                    <button class="btn" style="float: right;">send</button>
                 </div>
             </div>
         </div>
