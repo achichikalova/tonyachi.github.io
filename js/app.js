@@ -1,12 +1,13 @@
 $(document).ready(function () {
 
-    /* Smooth Scroll to Element on the pge*/
+    /* Smooth Scroll to Element on the page*/
     $('a[href^="#"]').on('click', function (event) {
 
         var target = $(this.getAttribute('href'));
 
         if (target.length) {
             event.preventDefault();
+
             $('html, body').stop().animate({
                 scrollTop: target.offset().top
             }, 1000);
@@ -90,6 +91,17 @@ $(document).ready(function () {
     $(".nav__link").click(function () {
         if ($(window).width() < 767)
             $(".nav").hide();
+    });
+
+
+    /* Fixed Header @mobile */
+    $(window).bind('scroll', function () {
+        if (window.matchMedia('(max-width: 768px)').matches) {
+            $('.header').addClass('fixed');
+        } else {
+            $('.header').removeClass('fixed');
+
+        }
     });
 
 
