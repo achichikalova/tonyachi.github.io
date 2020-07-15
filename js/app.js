@@ -16,7 +16,8 @@ $(document).ready(function () {
     });
 
     /* Portfolio Filter */
-    $(".nav-btn").click(function () {
+    $(".nav-btn").click(function (event) {
+        event.preventDefault();
         var cat = $(this).attr("data-filter");
         if (cat == "all") {
             $(".portfolio__item").show();
